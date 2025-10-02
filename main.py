@@ -10,3 +10,4 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit() # fechar a janela
             quit() # fechar pygame
+
