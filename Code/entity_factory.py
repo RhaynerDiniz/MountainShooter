@@ -4,8 +4,6 @@ from entity import Entity
 from player import Player
 from enemy import Enemy
 from background import Background
-from player_shot import PlayerShot
-from enemy_shot import EnemyShot
 
 class EntityFactory:
     """
@@ -32,9 +30,3 @@ class EntityFactory:
             surf.fill((50, 50, 100)) # Cor de fundo de exemplo
             rect = surf.get_rect(topleft=position)
             return Background(name, surf, rect)
-        elif entity_type == "player_shot":
-            return PlayerShot(name, surf, rect)
-        elif entity_type == "enemy_shot":
-            return EnemyShot(name, surf, rect)
-        else:
-            raise ValueError(f"Tipo de entidade desconhecido: {entity_type}")
